@@ -1,5 +1,5 @@
 {
-  "name": "web3js",
+  "name": "web3js-io",
   "version": "0.1.1",
   "type": "module",
   "main": "./dist/cjs/index.cjs",
@@ -42,6 +42,11 @@
   "author": "Yumin <yumin@yuminmail.com>",
   "license": "MIT",
   "description": "A library for interacting with the blockchains",
+  "homepage": "https://web3js.io",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guiyumin/web3js-io.git"
+  },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^28.0.3",
     "@rollup/plugin-node-resolve": "^16.0.1",
