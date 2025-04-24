@@ -1,4 +1,4 @@
-.PHONY: build clean install test tag tags
+.PHONY: build clean install test tag tags patch minor major
 
 build:
 	npm run build
@@ -27,3 +27,14 @@ endif
 
 tags:
 	git push --tags
+
+
+patch:
+	npm version patch
+
+minor:
+	npm version minor
+
+major:
+	npm version major
+
