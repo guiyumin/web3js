@@ -1,0 +1,51 @@
+{
+  "name": "web3js",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/cjs/index.cjs",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.cjs"
+    }
+  },
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build:esm": "tsc --module ES2020 --target ES2020 --outDir dist/esm",
+    "build:cjs": "tsc --module CommonJS --target ES2016 --outDir dist/cjs && node -p \"require('fs').renameSync('dist/cjs/index.js', 'dist/cjs/index.cjs'); require('fs').renameSync('dist/cjs/index.js.map', 'dist/cjs/index.cjs.map');\"",
+    "build:types": "tsc --emitDeclarationOnly --outDir dist/types",
+    "build": "npm run clean && npm run build:types && npm run build:esm && npm run build:cjs",
+    "test": "jest",
+    "prepare": "npm run build"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "keywords": [
+    "web3",
+    "bitcoin",
+    "ethereum",
+    "blockchain",
+    "solana",
+    "base",
+    "arbitrum",
+    "optimism",
+    "polygon",
+    "avalanche",
+    "gnosis",
+    "berachain",
+    "usdt",
+    "usdc"
+  ],
+  "author": "Yumin <yumin@yuminmail.com>",
+  "license": "MIT",
+  "description": "A library for interacting with the blockchains",
+  "devDependencies": {
+    "@types/node": "^22.14.1",
+    "jest": "^29.7.0",
+    "typescript": "^5.8.3"
+  }
+}
