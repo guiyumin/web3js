@@ -1,5 +1,5 @@
 {
-  "name": "web3js-io",
+  "name": "web3-js-io",
   "version": "0.1.2",
   "type": "module",
   "main": "./dist/cjs/index.cjs",
@@ -18,7 +18,7 @@
     "build:js": "rollup -c rollup.config.mjs",
     "build": "npm run clean && npm run build:types && npm run build:js",
     "test": "jest",
-    "prepare": "npm run build"
+    "prepublishOnly": "npm run build"
   },
   "files": [
     "dist/**/*"
