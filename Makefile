@@ -1,4 +1,4 @@
-.PHONY: build clean install test tag tags patch minor major
+.PHONY: build clean install test tag tags patch minor major publish
 
 build:
 	npm run build
@@ -38,3 +38,5 @@ minor:
 major:
 	npm version major
 
+publish:
+	npm publish
