@@ -1,5 +1,5 @@
 {
-  "name": "web3-js-io",
+  "name": "web3js-io",
   "version": "0.1.2",
   "type": "module",
   "main": "./dist/cjs/index.cjs",
